@@ -10,6 +10,9 @@ from django.contrib.auth.models import User
 from .forms import UserLoginForm, UserRegisterForm
 from django.contrib.auth.decorators import login_required
 from decimal import Decimal
+from django.core.mail import send_mail
+
+
 
 
 def home(request):
@@ -75,6 +78,8 @@ def bookings(request):
                                            dest=dest_r, price=price_r, nos=seats_r, date=date_r, time=time_r,
                                            status='BOOKED')
                 print('------------book id-----------', book.id)
+                email = User.objects.filter(username = name_r)[0].email
+                send_mail('AIRSOFT RESERVATION','Your bookin is confirmed','notanesportsorg@gmail.com',[email],fail_silently=False,)
                 # book.save()
                 return render(request, 'myapp/bookings.html', locals())
             else:
