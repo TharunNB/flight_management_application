@@ -2,5 +2,5 @@ projectKey=flight_management_app
 serverUrl=http://localhost:9000
 serverVersion=9.4.0.54424
 dashboardUrl=http://localhost:9000/dashboard?id=flight_management_app
-ceTaskId=AYDMig4SLuyC4tnDLRgU
-ceTaskUrl=http://localhost:9000/api/ce/task?id=AYDMig4SLuyC4tnDLRgU
+ceTaskId=AYDMqHOcGQzs_y6ROXEA
+ceTaskUrl=http://localhost:9000/api/ce/task?id=AYDMqHOcGQzs_y6ROXEA
